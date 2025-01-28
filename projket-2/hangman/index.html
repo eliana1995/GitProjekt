@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hänga Gubbe</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header><h1>Versionshantering och strategier med Git</h1></header>
+
+        <main>
+            <p>Gissa bokstäverna i ordet!</p>
+            <button id="start-btn" class="button">START NEW GAME</button>
+            <div class="game-container">
+                <div class="player-containers">
+                    <div id="player1-container" class="player-container">
+                        <div class="player-header"><h2>Player 1</h2></div>
+                        <pre
+                            id="player1-hangman-display"
+                            class="hangman-container hangman-display"
+                        ></pre>
+                        <div id="player1-word-display" class="word-display">
+                            _ _ _ _ _
+                        </div>
+
+                        <div id="player1-message" class="message">
+                            Vänta, turen är på gång...
+                        </div>
+                    </div>
+
+                    <div id="player2-container" class="player-container">
+                        <div class="player-header"><h2>Player 2</h2></div>
+
+                        <pre
+                            id="player2-hangman-display"
+                            class="hangman-container hangman-display"
+                        ></pre>
+                        <div id="player2-word-display" class="word-display">
+                            _ _ _ _ _
+                        </div>
+
+                        <div id="player2-message" class="message">
+                            Vänta, turen är på gång...
+                        </div>
+                    </div>
+                </div>
+                <h2 id="message"></h2>
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="letter-input"
+                        class="letter-input"
+                        placeholder="Gissa en bokstav"
+                        maxlength="1"
+                    />
+                    <button id="guess-button" class="button">Gissa</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Formulär för att lägga till nya ord -->
+        <div id="add-word-form">
+            <input
+                type="text"
+                id="new-word-input"
+                class="letter-input"
+                placeholder="Lägg till ett nytt ord"
+            />
+            <button id="add-word-button" class="button">Lägg till ord</button>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
